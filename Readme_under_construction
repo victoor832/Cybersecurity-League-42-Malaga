@@ -1,0 +1,399 @@
+<p align="center">
+  <img src="https://img.icons8.com/?size=512&id=55494&format=png" width="20%" alt="CYBERSECURITY-LEAGUE-42-MALAGA-logo">
+</p>
+<p align="center">
+    <h1 align="center">CYBERSECURITY-LEAGUE-42-MALAGA</h1>
+</p>
+<p align="center">
+    <em><code>❯ REPLACE-ME</code></em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/victoor832/Cybersecurity-League-42-Malaga?style=flat&logo=opensourceinitiative&logoColor=white&color=edc418" alt="license">
+	<img src="https://img.shields.io/github/last-commit/victoor832/Cybersecurity-League-42-Malaga?style=flat&logo=git&logoColor=white&color=edc418" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/victoor832/Cybersecurity-League-42-Malaga?style=flat&color=edc418" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/victoor832/Cybersecurity-League-42-Malaga?style=flat&color=edc418" alt="repo-language-count">
+</p>
+<p align="center">
+		<em>Built with the tools and technologies:</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/Astro-FF5D01.svg?style=flat&logo=Astro&logoColor=white" alt="Astro">
+	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
+	<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat&logo=HTML5&logoColor=white" alt="HTML5">
+	<img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat&logo=React&logoColor=black" alt="React">
+	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
+	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat&logo=TypeScript&logoColor=white" alt="TypeScript">
+	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
+	<img src="https://img.shields.io/badge/Flask-000000.svg?style=flat&logo=Flask&logoColor=white" alt="Flask">
+</p>
+
+<br>
+
+#####  Table of Contents
+
+- [ Overview](#-overview)
+- [ Features](#-features)
+- [ Repository Structure](#-repository-structure)
+- [ Modules](#-modules)
+- [ Getting Started](#-getting-started)
+    - [ Prerequisites](#-prerequisites)
+    - [ Installation](#-installation)
+    - [ Usage](#-usage)
+    - [ Tests](#-tests)
+- [ Project Roadmap](#-project-roadmap)
+- [ Contributing](#-contributing)
+- [ License](#-license)
+- [ Acknowledgments](#-acknowledgments)
+
+---
+
+##  Overview
+
+<code>❯ REPLACE-ME</code>
+
+---
+
+##  Features
+
+<code>❯ REPLACE-ME</code>
+
+---
+
+##  Repository Structure
+
+```sh
+└── Cybersecurity-League-42-Malaga/
+    ├── Automatic update of score charts for CTFd
+    │   ├── app.py
+    │   ├── requirements.txt
+    │   ├── templates
+    │   └── vercel.json
+    ├── Code validator for coalition battle
+    │   ├── _5e723b4b-b095-492c-86a3-732638b8b164.jpeg
+    │   ├── index.html
+    │   ├── mario
+    │   ├── script.js
+    │   ├── sonic
+    │   └── style.css
+    ├── Code validator for coalition battle with link to another URL
+    │   ├── index.html
+    │   ├── oculto.txt
+    │   ├── photo.png
+    │   ├── script.js
+    │   └── style.css
+    ├── Fake flag validation with rick roll troll
+    │   ├── README.md
+    │   ├── gif.webp
+    │   ├── index.html
+    │   └── rickroll.mp3
+    ├── Geoguessr
+    │   ├── README.md
+    │   ├── index.html
+    │   ├── script.js
+    │   └── style.css
+    ├── Hidden Button
+    │   └── index.html
+    ├── Manual update of score charts for CTFd
+    │   ├── app.py
+    │   ├── requirements.txt
+    │   ├── templates
+    │   └── vercel.json
+    ├── Web for league
+    │   └── Website under construction and undergoing tests
+    └── Website with schedules and planning
+        ├── IMG_20240409_194309.jpg
+        ├── index.html
+        └── logo42sinfondo.png
+```
+
+---
+
+##  Modules
+
+<details closed><summary>Hidden Button</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Hidden Button/index.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Automatic update of score charts for CTFd</summary>
+
+| File | Summary |
+| --- | --- |
+| [requirements.txt](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Automatic update of score charts for CTFd/requirements.txt) | <code>❯ REPLACE-ME</code> |
+| [app.py](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Automatic update of score charts for CTFd/app.py) | <code>❯ REPLACE-ME</code> |
+| [vercel.json](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Automatic update of score charts for CTFd/vercel.json) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Automatic update of score charts for CTFd.templates</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Automatic update of score charts for CTFd/templates/index.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Code validator for coalition battle</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle/index.html) | <code>❯ REPLACE-ME</code> |
+| [style.css](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle/style.css) | <code>❯ REPLACE-ME</code> |
+| [script.js](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle/script.js) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Code validator for coalition battle.sonic</summary>
+
+| File | Summary |
+| --- | --- |
+| [index3.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle/sonic/index3.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Code validator for coalition battle.mario</summary>
+
+| File | Summary |
+| --- | --- |
+| [index2.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle/mario/index2.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Website with schedules and planning</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Website with schedules and planning/index.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Geoguessr</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Geoguessr/index.html) | <code>❯ REPLACE-ME</code> |
+| [style.css](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Geoguessr/style.css) | <code>❯ REPLACE-ME</code> |
+| [script.js](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Geoguessr/script.js) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Manual update of score charts for CTFd</summary>
+
+| File | Summary |
+| --- | --- |
+| [requirements.txt](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Manual update of score charts for CTFd/requirements.txt) | <code>❯ REPLACE-ME</code> |
+| [app.py](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Manual update of score charts for CTFd/app.py) | <code>❯ REPLACE-ME</code> |
+| [vercel.json](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Manual update of score charts for CTFd/vercel.json) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Manual update of score charts for CTFd.templates</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Manual update of score charts for CTFd/templates/index.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Fake flag validation with rick roll troll</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Fake flag validation with rick roll troll/index.html) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Code validator for coalition battle with link to another URL</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle with link to another URL/index.html) | <code>❯ REPLACE-ME</code> |
+| [style.css](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle with link to another URL/style.css) | <code>❯ REPLACE-ME</code> |
+| [script.js](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle with link to another URL/script.js) | <code>❯ REPLACE-ME</code> |
+| [oculto.txt](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Code validator for coalition battle with link to another URL/oculto.txt) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests</summary>
+
+| File | Summary |
+| --- | --- |
+| [Instrucciones.txt](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Instrucciones.txt) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Liga_Astro</summary>
+
+| File | Summary |
+| --- | --- |
+| [tsconfig.json](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/tsconfig.json) | <code>❯ REPLACE-ME</code> |
+| [package.json](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/package.json) | <code>❯ REPLACE-ME</code> |
+| [astro.config.mjs](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/astro.config.mjs) | <code>❯ REPLACE-ME</code> |
+| [package-lock.json](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/package-lock.json) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Liga_Astro.src</summary>
+
+| File | Summary |
+| --- | --- |
+| [env.d.ts](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/src/env.d.ts) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Liga_Astro.src.pages</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.astro](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/src/pages/index.astro) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Liga_Astro.src.components</summary>
+
+| File | Summary |
+| --- | --- |
+| [navbar.astro](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/src/components/navbar.astro) | <code>❯ REPLACE-ME</code> |
+| [Card.astro](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/src/components/Card.astro) | <code>❯ REPLACE-ME</code> |
+| [text.astro](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/src/components/text.astro) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Liga_Astro.src.layouts</summary>
+
+| File | Summary |
+| --- | --- |
+| [Layout.astro](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Liga_Astro/src/layouts/Layout.astro) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Vanilla</summary>
+
+| File | Summary |
+| --- | --- |
+| [index.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Vanilla/index.html) | <code>❯ REPLACE-ME</code> |
+| [index2.html](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Vanilla/index2.html) | <code>❯ REPLACE-ME</code> |
+| [style.css](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Vanilla/style.css) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+<details closed><summary>Web for league.Website under construction and undergoing tests.Web_Vanilla.css</summary>
+
+| File | Summary |
+| --- | --- |
+| [style.css](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/Web for league/Website under construction and undergoing tests/Web_Vanilla/css/style.css) | <code>❯ REPLACE-ME</code> |
+
+</details>
+
+---
+
+##  Getting Started
+
+###  Prerequisites
+
+**HTML**: `version x.y.z`
+
+###  Installation
+
+Build the project from source:
+
+1. Clone the Cybersecurity-League-42-Malaga repository:
+```sh
+❯ git clone https://github.com/victoor832/Cybersecurity-League-42-Malaga
+```
+
+2. Navigate to the project directory:
+```sh
+❯ cd Cybersecurity-League-42-Malaga
+```
+
+3. Install the required dependencies:
+```sh
+❯ ❯ INSERT-INSTALL-COMMANDS
+```
+
+###  Usage
+
+To run the project, execute the following command:
+
+```sh
+❯ ❯ INSERT-RUN-COMMANDS
+```
+
+###  Tests
+
+Execute the test suite using the following command:
+
+```sh
+❯ ❯ INSERT-TEST-COMMANDS
+```
+
+---
+
+##  Project Roadmap
+
+- [X] **`Task 1`**: <strike>Implement feature one.</strike>
+- [ ] **`Task 2`**: Implement feature two.
+- [ ] **`Task 3`**: Implement feature three.
+
+---
+
+##  Contributing
+
+Contributions are welcome! Here are several ways you can contribute:
+
+- **[Report Issues](https://github.com/victoor832/Cybersecurity-League-42-Malaga/issues)**: Submit bugs found or log feature requests for the `Cybersecurity-League-42-Malaga` project.
+- **[Submit Pull Requests](https://github.com/victoor832/Cybersecurity-League-42-Malaga/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github.com/victoor832/Cybersecurity-League-42-Malaga/discussions)**: Share your insights, provide feedback, or ask questions.
+
+<details closed>
+<summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your github account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone https://github.com/victoor832/Cybersecurity-League-42-Malaga
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to github**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
+
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="left">
+   <a href="https://github.com{/victoor832/Cybersecurity-League-42-Malaga/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=victoor832/Cybersecurity-League-42-Malaga">
+   </a>
+</p>
+</details>
+
+---
+
+##  License
+
+This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+
+---
+
+##  Acknowledgments
+
+- List any resources, contributors, inspiration, etc. here.
+
+---
