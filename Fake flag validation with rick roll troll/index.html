@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag42</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        #welcomeScreen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+
+        #playButton {
+            font-size: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcomeScreen">
+        <button id="playButton">Congratulations, click to reveal the prize</button>
+    </div>
+    <audio id="audioPlayer" src="rickroll.mp3" loop></audio>
+    <img src="gif.webp" alt="GIF" style="width: 100%; height: auto;">
+
+    <script>
+        function toggleFullScreen(elem) {
+            if ((document.fullScreenElement!== undefined && document.fullScreenElement === null) || (document.msFullscreenElement!== undefined && document.msFullscreenElement === null) || (document.mozFullScreen!== undefined &&!document.mozFullScreen) || (document.webkitIsFullScreen!== undefined &&!document.webkitIsFullScreen) || (document.fullscreenElement!== undefined && document.fullscreenElement === null)) {
+                if (elem.requestFullScreen) {
+                    elem.requestFullScreen();
+                } else if (elem.mozRequestFullScreen) {
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullScreen) {
+                    elem.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+                } else if (elem.msRequestFullscreen) {
+                    elem.msRequestFullscreen();
+                }
+            } else {
+                if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var audioPlayer = document.getElementById('audioPlayer');
+            var playButton = document.getElementById('playButton');
+            var welcomeScreen = document.getElementById('welcomeScreen');
+            var gifImage = document.querySelector('img');
+
+            playButton.addEventListener('click', function() {
+                audioPlayer.play();
+                gifImage.style.display = 'block';
+                welcomeScreen.style.display = 'none';
+                toggleFullScreen(document.documentElement); // Llamada a la función para pantalla completa
+            });
+        });
+    </script>
+</body>
+</html>

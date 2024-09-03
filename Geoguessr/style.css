@@ -1,0 +1,54 @@
+html, body {
+    overflow: hidden;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+  }
+
+  button:hover {
+    background-color: #ff8d8d;
+    transform:scale(1.1);
+  }
+
+  img {
+    padding-top: 10px;
+  }
+
+  #street-view {
+    height: 105%;
+  }
+
+  #floating-panel {
+    border-radius: 12px;
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+      padding-bottom: 20px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: "Roboto", "sans-serif";
+    font-size: 15px;
+    line-height: 30px;
+    padding-left: 10px;
+    width: 20%;
+    height: 20%;
+  }
+
+  #floating-panel {
+    margin-left: -100px;
+  }

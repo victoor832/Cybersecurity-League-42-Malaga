@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/navbar.astro';
+import Text from '../components/text.astro';
+---
+
+<Layout title="Liga de Ciberseguridad">
+	<Navbar />
+	<Text 
+		title='Secure your Business with Expert Pentesting'
+		text='With our proactive penetration testing, our industry certified experts identify vulnerabilities to help secure your business before attackers can strike.'
+	/>
+	
+</Layout>
+<style>
+body::after {
+  content: "";
+  background: url(/wallpaper/adi-goldstein-EUsVwEOsblE-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+body {
+  width: 99%;
+  height: 97.7vh;
+  position: relative;
+}
+
+@media screen and (min-width: 636px){
+	body {
+	width: 99%;
+	height: 97.2vh;
+	position: relative;
+	}
+}
+</style>

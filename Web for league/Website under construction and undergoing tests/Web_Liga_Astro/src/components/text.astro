@@ -1,0 +1,107 @@
+---
+interface Props {
+	title: string;
+	text: string;
+}
+
+const { title, text } = Astro.props;
+---
+<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+
+<div class="link-card">
+    <div class="title">
+		<h1>
+			{title}
+		</h1>
+    </div>
+    <div class="text">
+        <div class="line">
+
+        </div>
+		<p>
+			{text}
+		</p>
+    </div>
+    <div class="svg">
+        <dotlottie-player src="https://lottie.host/cbd6c900-6b77-4a14-a4c3-6ee47a59702c/ciMoosUTRg.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    </div>
+</div>
+<style>
+    h1,p {
+        margin: 0;
+    }
+
+    .line {
+        width: 1%;
+        height: 100px;
+        background-color: #FFC925;
+        margin-right: 1rem;
+    }
+    
+    .link-card {
+      display: grid;
+      grid-template-columns: 2fr 1fr; /* Reduce el ancho de la primera columna */
+      grid-template-areas: 
+        "title svg"
+        "text svg";
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+      font-size: 3.5rem;
+       <a href="/liga/opcion2">Charlas</a>
+       <a href="/liga/opcion2">Noticias Internacionales</a>
+       <a href="/liga/opcion2">CTFs</a>
+       <a href="/liga/opcion2">Otros Eventos</a>
+     </div>
+  </div>
+  <a class="calendario" href="/calendario">Calendario</a>
+  <a class="login" href="/LogIn">Log In</a>
+  <button class="signup"><a class="sign_up" href="/SignUp">Sign Up</a></button>
+ </div>
+ 
+<style>
+
+  
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+      font-weight: 600;
+      line-height: 1;
+      color: white;
+      margin-top: 10%;
+      margin-left: 10vw;
+      margin-right: 5vw;
+      align-items: start; /* Alinea los elementos verticalmente al inicio */
+      justify-content: space-between;
+      grid-gap: 1rem;
+    }
+    
+    .title {
+      grid-area: title;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: rem; /* Reduce el margen inferior */
+    }
+    
+    .text {
+      grid-area: text;
+      font-size: 18px;
+      font-weight: 400;
+      max-width: 35rem;
+      line-height: 27px;
+      display: flex;
+      flex-direction: row;
+      align-items: center; /* Alinea los elementos horizontalmente en el centro */
+    }
+    
+    .svg {
+      grid-area: svg;
+      margin-top: 1rem; /* Añade margen superior */
+    }
+    
+    .svg dotlottie-player {
+      border: none;
+      transform: scale(1.5); /* Aumenta el tamaño del dotlottie */
+      transform-origin: left center; /* Asegura que el dotlottie se escala desde el centro izquierdo */
+    }
+    </style>

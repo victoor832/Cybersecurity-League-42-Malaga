@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class=".centered" id="flag-validation">
+        <input type="text" id="flag" name="flag" placeholder="Elige tu camino">
+        <button id="button" class="invisible-button" type="button" onclick="checkFlag()">Consigue tu moneda</button>
+    </form>
+    <div id="coin">
+        <a href="https://www.youtube.com/watch?v=WYjxcnMAfXo" target="_blank"><img src="./photo.png" alt="coin" id="coin-img"></a>
+    </div>
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text">¿Has mirado todo el codigo? (PD: boton oculto)</p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,106 @@
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            $.ajax({
+                url: "/data",
+                dataType: "json",
+                success: function(data) {
+                    var chartData = [['Grupo', 'Puntuación']];
+                    for (var key in data) {
+                        chartData.push([key, data[key]]);
+                    }
+                    var dataTable = google.visualization.arrayToDataTable(chartData);
+                    var options = {
+                        title: 'Puntuación de los grupos',
+                        legend: { position: 'bottom' }
+                    };
+                    var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
+                    chart.draw(dataTable, options);
+                }
+            });
+        }
+
+        setInterval(drawChart, 5000);
+    </script>
+</head>
+<body>
+    <div id="bar_chart" style="width: 1000px; height: 500px"></div>
+</body>
+</html>
+
+-->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title style="text-align: center;">Scoreboard Automatic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    $.ajax({
+        url: "/data",
+        dataType: "json",
+        success: function(data) {
+            var chartData = [['Grupo', 'Puntuación', { role: 'style' }, { role: 'annotation' }]];
+            for (var key in data) {
+                // Asegúrate de que el color se aplique correctamente a cada grupo
+                var color = '#e0440e'; // Color por defecto
+                if (key === 'hades') {
+                    color = '#e0440e'; // Rojo para hades
+                } else if (key === 'olympus') {
+                    color = '#0000ff'; // Azul para olympus
+                } else if (key === 'void') {
+                    color = '#800080'; // Morado para void
+                }
+                // Añade la anotación (el número de la puntuación) al final de cada fila de datos
+                chartData.push([key, data[key], color, data[key].toString()]);
+            }
+            var dataTable = google.visualization.arrayToDataTable(chartData);
+            var options = {
+                title: 'Puntuación de los grupos',
+                legend: { position: 'bottom' },
+                annotations: {
+                    textStyle: {
+                        fontSize: 12,
+                        bold: true,
+                        italic: false,
+                        color: '#871b47',
+                        auraColor: '#d799ae',
+                        opacity: 0.89
+                    }
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('bar_chart'));
+            chart.draw(dataTable, options);
+        }
+    });
+}
+
+setInterval(drawChart, 5000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Scoreboard</h1>
+        <div id="bar_chart" style="width: 1000px; height: 500px"></div>
+    </div>
+</body>
+</html>

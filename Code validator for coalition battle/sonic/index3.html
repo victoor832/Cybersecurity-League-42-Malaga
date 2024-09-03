@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="580b57fcd9996e24bc43c336.png" type="image/x-icon">
+    <title>Sonic Gana</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+.text {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* background: rgb(0,54,255);
+background: linear-gradient(124deg, rgba(0,54,255,1) 0%, rgba(0,212,255,1) 100%);  */
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
+}
+
+body {
+  font-family:"Bungee Spice",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: url('Untitled.png') fixed;
+  background-size: contain;
+}
+
+#imagen {
+  background-image: url('_33bf3325-0dff-4d9d-99dc-b3f37f7e5271.jpg');
+  width: 100%; /* Asegura que el div cubra toda la pantalla */
+  height: 100vh; /* Asegura que el div cubra toda la altura de la ventana */
+  position: absolute; /* Posiciona absolutamente para superponerlo al fondo */
+  top: 0;
+  left: 0;
+  background-size: contain;
+}
+#contenido {
+  display: none; /* Inicialmente oculto */
+  margin-top: 50px;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  text-align: center;
+  max-width: 100vw;
+  overflow: hidden;
+  font-weight: bolder;
+  color: rgb(49, 103, 221);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.text {
+  font-weight: bold;
+  font-size: 20px;
+}
+</style>
+<body>
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <div id="imagen"></div>
+    <!-- style="background-image: url('Untitled.png'); z-index: 1;" -->
+    <div id="contenido" class="text">
+      <!-- style="display:none; margin-top: 50px; text-align: center; max-width: 100vw; overflow: hidden; color: black;" -->
+        <div class="title" style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+            <h1 style="font-family:'Bungee Spice',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-style: normal;  font-weight: 400;  letter-spacing: 1px; background: linear-gradient(to right, rgb(29, 37, 104) 30%, #00028b 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> La coalición de Sonic gana la 3 batalla!!!</h1>
+        </div>
+        <div id="text" class="text" style="font-family:'Bungee Spice',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-style: normal;  font-weight: 400;margin-top: 50px; text-align: center;  max-width: 100vw; overflow: hidden; color: blue;">
+            <span><p class="first" style="font-size: 30px; text-align:center; text-transform:uppercase;">Enhorabuena por haber ganado esta batalla, se nota que sois la mejor coalición </p>
+            <p class="second" style="font-size: 20px; max-width: 100vw; box-sizing: border-box; margin-left: 2rem; margin-right: 2rem;">Como diria el propio Sonic:"Habeis alcanzado la meta a toda velocidad!!" Vuestra agilidad mental y trabajo en equipo son verdaderamente impresionantes. Habeis demotrado que, al igual que en los videojuegos de Sonic, con rapidez de pensamiento y colaboracion se pueden superar todos los obstaculos</p>
+            <p class="final" style="font-size: 30px">PD: Suerte para vuestra última semana!!</p></span>
+        </div>
+    </div>
+ 
+   <script>
+
+window.onload = function() {
+  setTimeout(function() {
+    document.getElementById('imagen').style.display = 'none'; // Oculta la imagen inicial después de 8 segundos
+    document.getElementById('contenido').style.display = 'block'; // Muestra el contenido principal después de 8 segundos
+  }, 8000);
+};
+
+
+function rand(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+
+   function getRandomLetter() {
+       var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+       return alphabet[rand(0, alphabet.length - 1)];
+   }
+
+   function getRandomWord(word) {
+       var text = word.innerHTML;
+       var finalWord = '';
+
+       for(var i = 0; i < text.length; i++) {
+           finalWord += text[i] == ' ' ? ' ' : getRandomLetter();
+       }
+
+       return finalWord;
+   }
+
+   function init() {
+   var words = document.querySelectorAll('p');
+   words.forEach(function(word) {
+       var interv = 'undefined';
+       var canChange = false;
+       var globalCount = 0;
+       var INITIAL_WORD = word.innerHTML;
+       var count = 0;
+       var isGoing = false;
+
+       if(isGoing) return;
+
+       isGoing = true;
+       var randomWord = getRandomWord(word);
+       word.innerHTML = randomWord;
+
+       // Calcula el intervalo de tiempo en función del número de letras en la palabra
+       var interval = Math.max(2000 / INITIAL_WORD.length, 50);
+
+       interv = setInterval(function() {
+           var finalWord = '';
+
+           for(var x = 0; x < INITIAL_WORD.length; x++) {
+               if(x <= count && canChange) {
+                   finalWord += INITIAL_WORD[x];
+               } else {
+                   finalWord += getRandomLetter();
+               }
+           }
+
+           word.innerHTML = finalWord;
+
+           if(canChange) {
+               count++;
+           }
+
+           if(globalCount >= 20) {
+               canChange = true;
+           }
+
+           if(count >= INITIAL_WORD.length) {
+               clearInterval(interv);
+               count = 0;
+               canChange = false;
+               globalCount = 0;
+               isGoing = false;
+           }
+
+           globalCount++;
+       }, interval);
+   });
+}
+
+   function otherFunction() {
+       'use strict';
+
+       // Globals
+       var random = Math.random
+       , cos = Math.cos
+       , sin = Math.sin
+       , PI = Math.PI
+       , PI2 = PI * 2
+       , timer = undefined
+       , frame = undefined
+       , confetti = [];
+
+       var particles = 3
+   , spread = 80
+   , sizeMin = 3
+   , sizeMax = 12 - sizeMin
+   , eccentricity = 10
+   , deviation = 100
+   , dxThetaMin = -.1
+   , dxThetaMax = -dxThetaMin - dxThetaMin
+   , dyMin = .13
+   , dyMax = .18
+   , dThetaMin = .4
+   , dThetaMax = .7 - dThetaMin;
+
+ var colorThemes = [
+   function() {
+     return color(200 * random()|0, 200 * random()|0, 200 * random()|0);
+   }, function() {
+     var black = 200 * random()|0; return color(200, black, black);
+   }, function() {
+     var black = 200 * random()|0; return color(black, 200, black);
+   }, function() {
+     var black = 200 * random()|0; return color(black, black, 200);
+   }, function() {
+     return color(200, 100, 200 * random()|0);
+   }, function() {
+     return color(200 * random()|0, 200, 200);
+   }, function() {
+     var black = 256 * random()|0; return color(black, black, black);
+   }, function() {
+     return colorThemes[random() < .5 ? 1 : 2]();
+   }, function() {
+     return colorThemes[random() < .5 ? 3 : 5]();
+   }, function() {
+     return colorThemes[random() < .5 ? 2 : 4]();
+   }
+ ];
+ function color(r, g, b) {
+   return 'rgb(' + r + ',' + g + ',' + b + ')';
+ }
+
+ // Cosine interpolation
+ function interpolation(a, b, t) {
+   return (1-cos(PI*t))/2 * (b-a) + a;
+ }
+
+ // Create a 1D Maximal Poisson Disc over [0, 1]
+ var radius = 1/eccentricity, radius2 = radius+radius;
+ function createPoisson() {
+   // domain is the set of points which are still available to pick from
+   // D = union{ [d_i, d_i+1] | i is even }
+   var domain = [radius, 1-radius], measure = 1-radius2, spline = [0, 1];
+   while (measure) {
+     var dart = measure * random(), i, l, interval, a, b, c, d;
+
+     // Find where dart lies
+     for (i = 0, l = domain.length, measure = 0; i < l; i += 2) {
+       a = domain[i], b = domain[i+1], interval = b-a;
+       if (dart < measure+interval) {
+         spline.push(dart += a-measure);
+         break;
+       }
+       measure += interval;
+     }
+     c = dart-radius, d = dart+radius;
+
+     // Update the domain
+     for (i = domain.length-1; i > 0; i -= 2) {
+       l = i-1, a = domain[l], b = domain[i];
+       // c---d          c---d  Do nothing
+       //   c-----d  c-----d    Move interior
+       //   c--------------d    Delete interval
+       //         c--d          Split interval
+       //       a------b
+       if (a >= c && a < d)
+         if (b > d) domain[l] = d; // Move interior (Left case)
+         else domain.splice(l, 2); // Delete interval
+       else if (a < c && b > c)
+         if (b <= d) domain[i] = c; // Move interior (Right case)
+         else domain.splice(i, 0, c, d); // Split interval
+     }
+
+     // Re-measure the domain
+     for (i = 0, l = domain.length, measure = 0; i < l; i += 2)
+       measure += domain[i+1]-domain[i];
+   }
+
+   return spline.sort();
+ }
+
+ // Create the overarching container
+ var container = document.createElement('div');
+ container.style.position = 'fixed';
+ container.style.top      = '0';
+ container.style.left     = '0';
+ container.style.width    = '100%';
+ container.style.height   = '0';
+ container.style.overflow = 'visible';
+ container.style.zIndex   = '9999';
+
+ // Confetto constructor
+ function Confetto(theme) {
+   this.frame = 0;
+   this.outer = document.createElement('div');
+   this.inner = document.createElement('div');
+   this.outer.appendChild(this.inner);
+
+   var outerStyle = this.outer.style, innerStyle = this.inner.style;
+   outerStyle.position = 'absolute';
+   outerStyle.width  = (sizeMin + sizeMax * random()) + 'px';
+   outerStyle.height = (sizeMin + sizeMax * random()) + 'px';
+   innerStyle.width  = '100%';
+   innerStyle.height = '100%';
+   innerStyle.backgroundColor = theme();
+
+   outerStyle.perspective = '50px';
+   outerStyle.transform = 'rotate(' + (360 * random()) + 'deg)';
+   this.axis = 'rotate3D(' +
+     cos(360 * random()) + ',' +
+     cos(360 * random()) + ',0,';
+   this.theta = 360 * random();
+   this.dTheta = dThetaMin + dThetaMax * random();
+   innerStyle.transform = this.axis + this.theta + 'deg)';
+
+   this.x = window.innerWidth * random();
+   this.y = -deviation;
+   this.dx = sin(dxThetaMin + dxThetaMax * random());
+   this.dy = dyMin + dyMax * random();
+   outerStyle.left = this.x + 'px';
+   outerStyle.top  = this.y + 'px';
+
+   // Create the periodic spline
+   this.splineX = createPoisson();
+   this.splineY = [];
+   for (var i = 1, l = this.splineX.length-1; i < l; ++i)
+     this.splineY[i] = deviation * random();
+   this.splineY[0] = this.splineY[l] = deviation * random();
+
+   this.update = function(height, delta) {
+     this.frame += delta;
+     this.x += this.dx * delta;
+     this.y += this.dy * delta;
+     this.theta += this.dTheta * delta;
+
+     // Compute spline and convert to polar
+     var phi = this.frame % 7777 / 7777, i = 0, j = 1;
+     while (phi >= this.splineX[j]) i = j++;
+     var rho = interpolation(
+       this.splineY[i],
+       this.splineY[j],
+       (phi-this.splineX[i]) / (this.splineX[j]-this.splineX[i])
+     );
+     phi *= PI2;
+
+     outerStyle.left = this.x + rho * cos(phi) + 'px';
+     outerStyle.top  = this.y + rho * sin(phi) + 'px';
+     innerStyle.transform = this.axis + this.theta + 'deg)';
+     return this.y > height+deviation;
+   };
+ }
+
+ function poof() {
+   if (!frame) {
+     // Append the container
+     document.body.appendChild(container);
+
+     // Add confetti
+     var theme = colorThemes[0]
+       , count = 0;
+     (function addConfetto() {
+       var confetto = new Confetto(theme);
+       confetti.push(confetto);
+       container.appendChild(confetto.outer);
+       timer = setTimeout(addConfetto, spread * random());
+     })(0);
+
+     // Start the loop
+     var prev = undefined;
+     requestAnimationFrame(function loop(timestamp) {
+       var delta = prev ? timestamp - prev : 0;
+       prev = timestamp;
+       var height = window.innerHeight;
+
+       for (var i = confetti.length-1; i >= 0; --i) {
+         if (confetti[i].update(height, delta)) {
+           container.removeChild(confetti[i].outer);
+           confetti.splice(i, 1);
+         }
+       }
+
+       if (timer || confetti.length)
+         return frame = requestAnimationFrame(loop);
+
+       // Cleanup
+       document.body.removeChild(container);
+       frame = undefined;
+     });
+   }
+ }
+
+ poof();
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+   init();
+   otherFunction();
+});
+ 
+   </script>
+</body>
+</html>
+</body>
+</html>

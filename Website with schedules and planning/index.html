@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" href="logo42sinfondo.png" type="image/x-icon">
+    <title>Liga de Ciberseguridad</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            background-color: #2d2d2d;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+        .hacked-container {
+            text-align: center;
+            margin-top: 35px;
+        }
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        #infoUsuario {
+            color: white;
+            margin-top: 20px;
+            padding-bottom: 10px;
+        }
+        #InfoUsuario {
+            color: white;
+            margin-bottom: 10px;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        .archive {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Estilos para la barra de progreso */
+        .processBar {
+            width: 80%;
+            height: 20px;
+            background-color: #444;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .processBar div {
+            height: 100%;
+            background-color: #2aff51;
+            text-align: right;
+            padding-right: 10px;
+            box-sizing: border-box;
+            transition: width 10s linear;
+        }
+        @media (max-device-width: 480px) and (min-device-width: 320px) {
+        body {
+            -webkit-overflow-scrolling: touch;
+        }
+}
+
+.horario {
+    background: #CFA2A2;
+    background: linear-gradient(to right, #CFA2A2 0%, #8783CF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    text-align: center
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap');
+
+.title {
+    font-size: 15px;
+    font-family: JetBrains Mono, monospace;
+    color: #e4bb68;
+}
+.de {
+    color: #e06c75;
+}
+.punto {
+    color: #FFF;
+}
+.ciberseguridad {
+    color: #61afef;
+}
+.bienvenido {
+    color: #b9b9b9;
+}
+.horas {
+    margin-bottom: 40px;
+}
+.title_hora {
+    font-size: 20px;
+    color: #e4bb68;
+    margin: 0;
+}
+.hora {
+    font-size: 15px;
+    color: #FFF;
+}
+    </style>
+</head>
+<body>
+    <div class="hacked-container">
+        <h1 class="title">Liga<span class="punto">.</span><span class="de">de</span><span class="punto">.</span><span class="ciberseguridad">Ciberseguridad</span><span>("</span><span class="bienvenido">Bienvenido</span><span>")</span></h1>
+        <h3 class="horario">Horario</h3>
+        <div class="horas">
+            <h5 class="title_hora">Mañana</h5>
+            <p class="hora"><span style="color: #97ffbd;">12:05 - 12:20</span>: Presentacion de la liga Ciberseguridad.</p>
+            <p class="hora"><span style="color: #97ffbd;">12:25 - 12:40</span>: Desafiando la seguridad en las redes sociales: ¿Estás Realmente Protegido? (Ingeniería Social y OSINT)</p>
+            <p class="hora"><span style="color: #97ffbd;">12:45 - 13:00</span>: Explorando las bases de la Ciberseguridad: Un Viaje de Iniciación</p>
+            
+            <h5 class="title_hora">Tarde</h5>
+            <p class="hora"><span style="color: #97ffbd;">17:05 - 17:20</span>: Presentacion de la liga Ciberseguridad.</p>
+            <p class="hora"><span style="color: #97ffbd;">17:25 - 17:40</span>: Desafiando la seguridad en las redes sociales: ¿Estás Realmente Protegido? (Ingeniería Social y OSINT)</p>
+            <p class="hora"><span style="color: #97ffbd;">17:45 - 18:00</span>: Explorando las bases de la Ciberseguridad: Un Viaje de Iniciación</p>
+        </div> 
+    </div>
+    <img src="IMG_20240409_194309.jpg" width="100%" height="auto" alt="Standad">
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([36.698934717958764, -4.439174874413605], 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([36.69948959397255, -4.439732790871106]).addTo(map)
+            .bindPopup('¡Hola! Estás aquí.')
+            .openPopup();
+        window.onload = function() {
+        var progressBar = document.querySelector('.processBar div');
+        var width = 20;
+        history.pushState(null, null, location.href);
+        var interval = setInterval(function() {
+            if (width >= 100) {
+                progressBar.style.width = '100%'; 
+                progressBar.textContent = '100% ';
+                clearInterval(interval);
+                setTimeout(function() {
+                    document.querySelector('.archive').style.display = 'none';
+                }, 1000);
+            } else {
+                width++; 
+                progressBar.style.width = width + '%'; 
+                progressBar.textContent = width + '% ';
+            }
+        }, 100); // Ajusta este valor para controlar la velocidad de la barra de progreso
+        setTimeout(function() {
+        window.onpopstate = function(event) {
+            history.go(1);
+        };
+    },5000);
+};
+    </script>
+</body>
+</html>

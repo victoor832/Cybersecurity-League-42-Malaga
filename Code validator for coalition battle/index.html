@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Batalla de Coaliciones</title>
+</head>
+<body>
+    <div class="container-first">
+        <button id="boton" class="custom-btn btn-12"><span>Tienes tiempo...</span><span>Prueba tu código</span></button>
+    </div>
+    <div class="container">
+        <form id="form">
+            <label for="first-name">Introduce tu código:</label>
+            <input type="text" id="codigo" name="first-name" placeholder="Código" onkeyup="agregarGuiones(this)" required maxlength="19">     
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Tu código es erróneo</p>
+    </div>
+  </div>
+  
+</body>
+<script src="script.js"></script>
+</html>

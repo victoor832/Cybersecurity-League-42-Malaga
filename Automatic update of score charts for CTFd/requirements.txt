@@ -1,0 +1,4 @@
+requests
+schedule
+matplotlib
+Flask

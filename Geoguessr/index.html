@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GeoGuessr</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <div id="floating-panel">
+      <h1></h1>
+      <h1>Para obtener la flag, introduce el nombre de la ciudad</h1>
+      <h2 id="score"></h2>
+      <button onclick="guess()">Ya sé dónde está</button>
+    </div>
+
+    <div id="street-view"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=#&callback=initialize&libraries=&v=weekly" async></script>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.body.classList.add("no-scroll");
+      });
+    </script>
+    
+</body>
+</html>

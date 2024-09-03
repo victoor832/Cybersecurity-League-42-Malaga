@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    background-color: #333;
+}
+
+.btn-navbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    background-color: red;
+}
+
+.texto-izq {
+    background-color: blue;
+}

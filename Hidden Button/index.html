@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR flag</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff4500;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        #dynamicButton {
+        position: absolute;
+        top: 100%;
+        left: 45%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+    }
+
+        .secret {
+            width: 150px;
+            height: 50px;
+            opacity: 0;
+            transition: opacity 1s;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(182, 25, 25, 0.5);
+            color: rgba(255, 255, 255, 0.3);
+            border: none;
+        }
+
+        .secret:hover {
+            opacity: 1;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ok, point for you. Here you will find the key</h1>
+        <button id="dynamicButton">Show key</button>
+    </div>  
+    <div>
+        <button id="secretButton" class="secret">Hidden button</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function generateNewButton(event) {
+                if (event.target.id === 'secretButton') return;
+    
+                if (!event.target.matches('#dynamicButton,.secret')) return;
+    
+                const newButton = document.createElement('button');
+                newButton.id = 'dynamicButton';
+                newButton.textContent = 'Show key';
+                newButton.style.position = 'absolute';
+                newButton.style.cursor = 'pointer';
+    
+                const availableHorizontalSpace = window.innerWidth - newButton.offsetWidth;
+                const availableVerticalSpace = window.innerHeight - newButton.offsetHeight;
+    
+                newButton.style.left = Math.min(Math.random() * availableHorizontalSpace, availableHorizontalSpace - newButton.offsetWidth) + 'px';
+                newButton.style.top = Math.min(Math.random() * availableVerticalSpace, availableVerticalSpace - newButton.offsetHeight) + 'px';
+    
+                document.body.appendChild(newButton);
+    
+                window.addEventListener('click', generateNewButton);
+            }
+    
+            window.addEventListener('click', generateNewButton);
+    
+            const secretButton = document.getElementById('secretButton');
+    
+            secretButton.addEventListener('mouseover', function() {
+                this.style.opacity = '1';
+            });
+    
+            secretButton.addEventListener('click', function() {
+                this.style.display = 'block';
+                alert('Check the comments on the LEGO building');
+            });
+    
+            function placeButtonInRandomCorner(button) {
+                const corners = [
+                    { top: '0px', left: '0px' },
+                    { top: '0px', right: '0px' },
+                    { bottom: '0px', left: '0px' },
+                    { bottom: '0px', right: '0px' }
+                ];
+    
+                const cornerIndex = Math.floor(Math.random() * corners.length);
+                const selectedCorner = corners[cornerIndex];
+    
+                let finalTop, finalLeft;
+    
+                switch (cornerIndex) {
+                    case 0:
+                        finalTop = selectedCorner.top;
+                        finalLeft = selectedCorner.left;
+                        break;
+                    case 1:
+                        finalTop = selectedCorner.top;
+                        finalLeft = window.innerWidth - button.offsetWidth + 'px';
+                        break;
+                    case 2:
+                        finalTop = window.innerHeight - button.offsetHeight + 'px';
+                        finalLeft = selectedCorner.left;
+                        break;
+                    case 3:
+                        finalTop = window.innerHeight - button.offsetHeight + 'px';
+                        finalLeft = window.innerWidth - button.offsetWidth + 'px';
+                        break;
+                }
+    
+                button.style.position = 'absolute';
+                button.style.top = finalTop;
+                button.style.left = finalLeft;
+            }
+    
+            function updateButtonPosition() {
+                placeButtonInRandomCorner(secretButton);
+            }
+    
+            window.onload = function() {
+                updateButtonPosition();
+                window.addEventListener('resize', updateButtonPosition);
+            };
+    
+            window.addEventListener('beforeunload', () => {
+                window.removeEventListener('resize', updateButtonPosition);
+            });
+        });
+    </script>
+</body>
+</html>

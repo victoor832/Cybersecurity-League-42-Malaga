@@ -1,0 +1,266 @@
+<head>
+  <link href="https://db.onlinewebfonts.com/c/7b7a625024c0f39cbca2cf9674f51d94?family=General+Sans+Variable" rel="stylesheet">
+</head>
+<div class="nav-links">
+  <img class="logo" src="/logo/logo42amarillo.png" alt="logo">
+  <a class="home" href="/">Home</a>
+  <div class="dropdown">
+     <a class="liga" href="/liga">Liga 
+       <svg width="10" height="5" margin-bottom="2" viewBox="-2.5 -5 75 60" preserveAspectRatio="none">
+         <path d="M0,0 l35,50 l35,-50" fill="none" stroke="white" stroke-linecap="round" stroke-width="5" />
+       </svg>
+     </a>
+     <div class="dropdown-content">
+       <a href="/liga/opcion1">Charl<link href="https://db.onlinewebfonts.com/c/7b7a625024c0f39cbca2cf9674f51d94?family=General+Sans+Variable" rel="stylesheet">as</a>
+       <a href="/liga/opcion2">Talleres</a>
+       <a href="/liga/opcion2">Calendario</a>
+       <a href="/liga/opcion2">Resolucion CTF</a>
+     </div>
+  </div>
+  <div class="dropdown">
+     <a class="noticias" href="/noticias">Noticias
+       <svg width="10" height="5" margin-bottom="2" viewBox="-2.5 -5 75 60" preserveAspectRatio="none">
+         <path d="M0,0 l35,50 l35,-50" fill="none" stroke="white" stroke-linecap="round" stroke-width="5" />
+       </svg>
+     </a>
+     <div class="dropdown-content">
+       <a href="/noticias/opcion1">CVE</a>
+       <br>
+       <a href="/noticias/opcion2">Talleres</a>
+       <a href="/liga/opcion2">Charlas</a>
+       <a href="/liga/opcion2">Noticias Internacionales</a>
+       <a href="/liga/opcion2">CTFs</a>
+       <a href="/liga/opcion2">Otros Eventos</a>
+     </div>
+  </div>
+  <a class="calendario" href="/calendario">Calendario</a>
+  <a class="login" href="/LogIn">Log In</a>
+  <button class="signup"><a class="sign_up" href="/SignUp">Sign Up</a></button>
+ </div>
+ 
+<style>
+
+  
+.dropdown {
+ position: relative;
+ display: inline-block;
+}
+
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: var(--navbar-background);
+ min-width: 70vw;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+.dropdown-content a {
+ color: var(--navbar-color);
+ padding: 12px 16px;
+ text-decoration: none;
+ text-align: start !important;
+ display: block;
+}
+
+.dropdown-content a:hover {
+  color: var(--dropdown-hover-color);
+}
+
+.dropdown:hover .dropdown-content {
+ display: grid;
+}
+
+
+
+/* Hast aqui bien */
+
+
+
+
+:root { /* Define las variables de color */
+  color-scheme: light dark;
+  --navbar-background: light-dark(#e0e0e0, #1b1b1b);
+  --navbar-color: light-dark(#1b1b1b, #e0e0e0);
+  --navbar-hover: light-dark(#5603AD, #FFC925);
+  --button-background: light-dark(#5603AD, #FFC925);
+  --button-background-hover: light-dark(#FFC925, #5603AD);
+  --button-color: light-dark(white, black);
+  --button-color-hover: light-dark(black, white);
+  --dropdown-hover-color: light-dark(#ffd862, #9e44ff);
+}
+
+  .nav-links {
+    display: flex;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 10px;
+    top: 6rem;
+    left: 48px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: var(--navbar-background);
+    color: var(--navbar-color);
+    text-decoration: none;
+    align-items: center;
+    border-radius: 5rem;
+    justify-content: space-between;
+  }
+
+  .home,.liga,.noticias,.calendario,.login {
+    color: var(--navbar-color);
+    text-decoration: none;
+    margin-right: 0.6vw;
+  }
+
+  .home:hover,.liga:hover,.noticias:hover,.calendario:hover,.login:hover {
+    color: var(--navbar-hover);
+    text-decoration: none;
+  }
+
+  .liga svg {
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  .liga:hover svg {
+    transform: rotate(180deg);
+  }
+
+  .liga:hover svg path {
+    stroke: var(--navbar-hover);
+  }
+
+  .noticias svg {
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  .noticias:hover svg {
+    transform: rotate(180deg);
+  }
+
+  .noticias:hover svg path {
+    stroke: var(--navbar-hover);
+  }
+
+  .signup {
+    padding: 0;
+    margin-right: 10px;
+  }
+
+  .sign_up {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto del elemento padre */
+    outline: none; /* Elimina el contorno alrededor del enlace cuando tiene el foco */
+    padding: 15px 35px !important;
+  }
+
+  .logo {
+    padding-left: 2%;
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    margin-right: 27vw;
+    padding-left: 2%;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    text-align: center;
+    padding: 1.5rem 0.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  button {
+    user-select: none;
+    background-color: var(--button-background);
+    color: var(--button-color);
+    text-decoration: none;
+    border-radius: 2rem;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--button-background-hover);
+    color: var(--button-color-hover);
+    text-decoration: none;
+  }
+
+  .expanded {
+    display: unset;
+  }
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home, .liga, .noticias, .calendario, .login {
+    margin-right: 0;
+    margin-bottom: 0.5rem; 
+  }
+
+  .logo {
+    margin-right: 0;
+    margin-bottom: 0.5rem; 
+  }
+
+  .signup {
+    margin-top: 0.5rem; 
+  }
+}
+@media (min-width: 1590px) {
+  .nav-links {
+    display: flex;
+    justify-content: space-between; /* Separa los grupos de elementos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    margin-right: 10vw;
+    margin-left: 10vw;
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  }
+
+  .home, .liga, .noticias, .calendario, .login { /* Añade margen a la derecha para separar los elementos */
+    margin-right: 15px; /* Añade un pequeño margen a la derecha */
+  }
+
+  .logo { /* Añade margen a la derecha para separar el logo de los demás elementos */
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0; /* Elimina el margen inferior */
+  }
+
+  .signup {
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+  }
+}
+
+/* 1327 se rompe */
+
+</style>
+<script>
+  document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+ dropdown.addEventListener('click', function(event) {
+    event.stopPropagation();
+    this.classList.toggle('is-active');
+ });
+});
+
+document.addEventListener('click', function() {
+ document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+    dropdown.classList.remove('is-active');
+ });
+});
+
+</script>
