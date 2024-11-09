@@ -61,17 +61,17 @@
   </style>
   <script>
     function checkPermission(permission) {
-      const correctPermissions = ['contactos', 'galeria','microfono','ubicacion'];
+      const correctPermissions = ['contactos', 'galeria','ubicacion'];
       const resultDiv = document.getElementById("result");
 
       if (correctPermissions.includes(permission)) {
-        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima.";
+        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de linterna.";
         resultDiv.className = "result correct";
       } else if (permission === 'ubicacion') {
-        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
+        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de linterna.";
         resultDiv.className = "result incorrect";
       } else {
-        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
+        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de linterna.";
         resultDiv.className = "result incorrect";
       }
       setTimeout(function() {
@@ -81,7 +81,7 @@
   </script>
 </head>
 <body>
-  <h1>Permisos Solicitados por Icon Torch (App para usar la linterna)</h1>
+  <h1>Permisos Solicitados por Icon Torch (Linterna)</h1>
 
   <div class="permissions-list">
     <div class="permission-item" onclick="checkPermission('contactos')">
@@ -95,9 +95,6 @@
     </div>
     <div class="permission-item" onclick="checkPermission('galeria')">
       <span>🖼️</span> Acceso a Galería de Fotos
-    </div>
-    <div class="permission-item" onclick="checkPermission('microfono')">
-      <span>🔊</span> Acceso a Micrófono
     </div>
   </div>
 
