@@ -77,9 +77,9 @@
       const resultDiv = document.getElementById("result");
 
       if (correctPermissions.includes(permission)) {
-        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima. Espera 5 seg y aparecerá tu siguiente reto";
+        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima.";
         resultDiv.className = "result correct";
-      } else if (permission != correctPermissions) {
+      } else if (permission === 'ubicacion') {
         resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
         resultDiv.className = "result incorrect";
       } else {
@@ -93,27 +93,27 @@
   </script>
 </head>
 <body>
+  <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+    <h1>Permisos Solicitados por AccuWeather (App para ver el tiempo)</h1>
 
-  <h1>Permisos Solicitados por Clima Global</h1>
+    <div class="permissions-list">
+      <div class="permission-item" onclick="checkPermission('ubicacion')">
+        <span>📍</span> Acceso a Ubicación
+      </div>
+      <div class="permission-item" onclick="checkPermission('contactos')">
+        <span>📞</span> Acceso a Contactos
+      </div>
+      <div class="permission-item" onclick="checkPermission('galeria')">
+        <span>🖼️</span> Acceso a Galería de Fotos
+      </div>
+      <div class="permission-item" onclick="checkPermission('notificaciones')">
+        <span>🔔</span> Envío de Notificaciones
+      </div>
+    </div>
 
-  <div class="permissions-list">
-    <div class="permission-item" onclick="checkPermission('ubicacion')">
-      <span>📍</span> Acceso a Ubicación
-    </div>
-    <div class="permission-item" onclick="checkPermission('contactos')">
-      <span>📞</span> Acceso a Contactos
-    </div>
-    <div class="permission-item" onclick="checkPermission('galeria')">
-      <span>🖼️</span> Acceso a Galería de Fotos
-    </div>
-    <div class="permission-item" onclick="checkPermission('notificaciones')">
-      <span>🔔</span> Envío de Notificaciones
+    <div id="result" class="result">
+      Haz clic en cada permiso para ver si es necesario o innecesario.
     </div>
   </div>
-
-  <div id="result" class="result">
-    Haz clic en cada permiso para ver si es necesario o innecesario.
-  </div>
-
 </body>
 </html>
