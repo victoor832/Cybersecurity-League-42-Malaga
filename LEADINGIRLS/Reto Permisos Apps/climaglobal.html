@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application permissions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #444;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .permissions-list {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .permission-item {
+      font-size: 1.2em;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px;
+      transition: background-color 0.2s ease;
+    }
+    .permission-item:hover {
+      background-color: #e0e0e0;
+    }
+    .permission-item span {
+      margin-right: 10px;
+      font-size: 1.5em;
+    }
+    .result {
+      font-size: 1.1em;
+      color: #555;
+      max-width: 400px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    .back-link {
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+    .back-link:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <script>
+    function checkPermission(permission) {
+      const correctPermissions = ['contactos', 'galeria'];
+      const resultDiv = document.getElementById("result");
+
+      if (correctPermissions.includes(permission)) {
+        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima.";
+        resultDiv.className = "result correct";
+      } else {
+        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
+        resultDiv.className = "result incorrect";
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Permisos Solicitados por Clima Global</h1>
+
+  <div class="permissions-list">
+    <div class="permission-item" onclick="checkPermission('ubicacion')">
+      <span>📍</span> Acceso a Ubicación
+    </div>
+    <div class="permission-item" onclick="checkPermission('contactos')">
+      <span>📞</span> Acceso a Contactos
+    </div>
+    <div class="permission-item" onclick="checkPermission('galeria')">
+      <span>🖼️</span> Acceso a Galería de Fotos
+    </div>
+    <div class="permission-item" onclick="checkPermission('notificaciones')">
+      <span>🔔</span> Envío de Notificaciones
+    </div>
+  </div>
+
+  <div id="result" class="result">
+    Haz clic en cada permiso para ver si es necesario o innecesario.
+  </div>
+
+  <a href="index.html" class="back-link">Regresar</a>
+
+</body>
+</html>
