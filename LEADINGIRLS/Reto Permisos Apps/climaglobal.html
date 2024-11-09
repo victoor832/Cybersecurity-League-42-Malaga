@@ -77,12 +77,18 @@
       const resultDiv = document.getElementById("result");
 
       if (correctPermissions.includes(permission)) {
-        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima.";
+        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima. Espera 5 seg y aparecerá tu siguiente reto";
         resultDiv.className = "result correct";
+      } else if (permission != correctPermissions) {
+        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
+        resultDiv.className = "result incorrect";
       } else {
         resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
         resultDiv.className = "result incorrect";
       }
+      setTimeout(function() {
+        window.location.href = "linternapro.html";
+      }, 5000);
     }
   </script>
 </head>
@@ -108,8 +114,6 @@
   <div id="result" class="result">
     Haz clic en cada permiso para ver si es necesario o innecesario.
   </div>
-
-  <a href="index.html" class="back-link">Regresar</a>
 
 </body>
 </html>
