@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #303030;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0;
+            animation: fall 5s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        .text {
+            background-color: rgb(137, 145, 255);
+            padding: 2rem;
+            border-radius: 2rem;
+            font-size: 2em;
+            color: #99ff69;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+    </style>
+
+    <div class="text" style="font-size: 3em; font-weight: bold; text-shadow: 2px 2px 4px #000000; animation: pulse 1s infinite;">
+        La flag es: Hola
+    </div>
+
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <script>
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            confetti.style.width = Math.random() * 10 + 5 + 'px';
+            confetti.style.height = confetti.style.width;
+            confetti.style.clipPath = getRandomShape();
+            confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+            document.body.appendChild(confetti);
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+
+        function getRandomShape() {
+            const shapes = [
+                'polygon(50% 0%, 0% 100%, 100% 100%)', // Triangle
+                'polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%)', // Diamond
+                'polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%)', // Hexagon
+                'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)', // Rhombus
+                'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)' // Pentagon
+            ];
+            return shapes[Math.floor(Math.random() * shapes.length)];
+        }
+
+        setInterval(createConfetti, 100);
+    </script>
+</body>
+</html>
