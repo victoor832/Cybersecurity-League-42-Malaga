@@ -73,43 +73,48 @@
   </style>
   <script>
     function checkPermission(permission) {
-      const correctPermissions = ['ubicacion', 'microfono'];
+      const correctPermissions = ['ubicacion'];
       const resultDiv = document.getElementById("result");
 
       if (correctPermissions.includes(permission)) {
-        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de notas.";
+        resultDiv.textContent = "Correcto: Este permiso es innecesario para una app de clima.";
         resultDiv.className = "result correct";
+      } else if (permission === 'ubicacion') {
+        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
+        resultDiv.className = "result incorrect";
       } else {
-        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de notas.";
+        resultDiv.textContent = "Incorrecto: Este permiso podría ser necesario para una app de clima.";
         resultDiv.className = "result incorrect";
       }
+      setTimeout(function() {
+        window.location.href = "linternapro.html";
+      }, 5000);
     }
   </script>
 </head>
 <body>
+  <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
 
-  <h1>Permisos Solicitados por Notas Privadas</h1>
+    <h1>Permisos Solicitados por Notas Privadas</h1>
 
-  <div class="permissions-list">
-    <div class="permission-item" onclick="checkPermission('contactos')">
-      <span>📞</span> Acceso a Contactos
+    <div class="permissions-list">
+      <div class="permission-item" onclick="checkPermission('contactos')">
+        <span>📞</span> Acceso a Contactos
+      </div>
+      <div class="permission-item" onclick="checkPermission('ubicacion')">
+        <span>📍</span> Acceso a Ubicación
+      </div>
+      <div class="permission-item" onclick="checkPermission('galeria')">
+        <span>🖼️</span> Acceso a Galería de Fotos
+      </div>
+      <div class="permission-item" onclick="checkPermission('microfono')">
+        <span>🔊</span> Acceso a Micrófono
+      </div>
     </div>
-    <div class="permission-item" onclick="checkPermission('ubicacion')">
-      <span>📍</span> Acceso a Ubicación
-    </div>
-    <div class="permission-item" onclick="checkPermission('galeria')">
-      <span>🖼️</span> Acceso a Galería de Fotos
-    </div>
-    <div class="permission-item" onclick="checkPermission('microfono')">
-      <span>🔊</span> Acceso a Micrófono
+
+    <div id="result" class="result">
+      Haz clic en cada permiso para ver si es necesario o innecesario.
     </div>
   </div>
-
-  <div id="result" class="result">
-    Haz clic en cada permiso para ver si es necesario o innecesario.
-  </div>
-
-  <a href="index.html" class="back-link">Regresar</a>
-
 </body>
 </html>
