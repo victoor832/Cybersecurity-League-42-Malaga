@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 19rem;
+}
+
+h1 {
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 19rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    background-color: #4ecdc4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background-color: #45b7aa;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#celebration {
+    margin-top: 1.5rem;
+}
+
+#celebration h2 {
+    color: #4ecdc4;
+}
+
+.confetti {
+    font-size: 3rem;
+    animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.hidden {
+    display: none;
+}
