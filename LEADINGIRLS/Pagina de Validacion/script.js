@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const celebration = document.getElementById('celebration');
 
     // El código correcto - puedes cambiarlo por el que necesites
-    const CODIGO_CORRECTO = "10-38-02-42";
+    const CODIGO_CORRECTO = "10-38-02-03";
 
     function formatCode(code) {
         code = code.replace(/[^0-9-]/g, '');
