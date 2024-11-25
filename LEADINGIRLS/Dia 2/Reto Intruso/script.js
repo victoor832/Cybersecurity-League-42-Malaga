@@ -32,7 +32,7 @@ function checkAnswer() {
     resultElement.style.display = 'block';
 
     if (answer === "intruso") {
-        resultElement.textContent = "¡Correcto! El usuario 'Intruso' intentó acceder a áreas restringidas con la IP 172.16.254.1.";
+        resultElement.textContent = "¡Correcto! El usuario 'Intruso' intentó acceder a áreas restringidas con la IP 172.16.254.1. La flag es 92";
         resultElement.style.color = '#00ff00';
     } else {
         resultElement.textContent = "Respuesta incorrecta. Revisa los registros nuevamente.";
