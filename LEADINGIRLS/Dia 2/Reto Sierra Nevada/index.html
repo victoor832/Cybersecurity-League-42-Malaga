@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto 2: El Tesoro Escondido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Reto 2: El Tesoro Escondido</h1>
+    <div class="challenge-box">
+      <p class="message">Mensaje cifrado:</p>
+      <p class="encrypted-message" id="encryptedMessage">37°05'47.1"N, M7AyMyc1My4zIlc=</p>
+      <button id="copyButton" class="copy-button">Copiar</button>
+    </div>
+    <p class="instructions">Descifra el código y encuentra el tesoro en Google Maps.</p>
+    <div class="input-group">
+      <input type="text" id="answer" placeholder="Ingresa el lugar">
+      <button id="submitButton" class="submit-button">Enviar</button>
+    </div>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
