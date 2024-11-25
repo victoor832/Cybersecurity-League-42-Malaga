@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Top Navigation Bar -->
+        <header class="fixed top-0 left-0 right-0 flex items-center justify-between bg-white p-2 shadow-sm z-10">
+            <div class="flex items-center">
+                <button id="menu-toggle" class="p-2 hover:bg-gray-100 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <img src="https://www.google.com/gmail/about/static/images/logo-gmail.png?cache=1adba63" alt="Gmail" class="h-10 ml-0 md:ml-4 xl:ml-6 2xl:ml-8 lg:ml-4">
+            </div>
+            <div class="flex-grow max-w-2xl mx-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search mail" class="w-full py-2 px-4 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute right-3 top-2.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar fixed left-0 top-16 bottom-0 w-64 bg-white p-4 overflow-y-auto">
+            <button id="compose-btn" class="flex items-center justify-center w-full py-3 px-4 rounded-full shadow-md bg-white hover:shadow-lg transition-shadow duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                <span class="font-medium">Compose</span>
+            </button>
+            
+            <!-- Sidebar items -->
+            <ul class="mt-4 space-y-1">
+                <li>
+                    <button class="flex items-center w-full py-1.5 px-3 rounded-full hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
+                        </svg>
+                        <span>Inbox</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex items-center w-full py-1.5 px-3 rounded-full hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                        <span>Starred</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex items-center w-full py-1.5 px-3 rounded-full hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>Snoozed</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex items-center w-full py-1.5 px-3 rounded-full hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                        <span>Important</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex items-center w-full py-1.5 px-3 rounded-full hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                        <span>Sent</span>
+                    </button>
+                </li>
+                <li>
+                    <button class="flex items-center w-full py-1.5 px-3 rounded-full hover:bg-gray-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                        <span>Trash</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content" class="main-content flex-1 ml-64 mt-16 bg-white">
+            <!-- Toolbar -->
+            <div class="flex items-center justify-between p-4 border-b">
+                <div class="flex items-center space-x-2">
+                    <input type="checkbox" class="mr-4">
+                    <button class="p-2 hover:bg-gray-100 rounded-full" title="Refresh">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </button>
+                    <button id="delete-button" class="p-2 hover:bg-gray-100 rounded-full flex items-center space-x-2 bg-gray-100" title="Delete">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                        </svg>
+                        <span>Delete</span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Email List -->
+            <div id="email-list" class="divide-y">
+                <!-- Emails will be rendered here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Email Content Modal -->
+    <div id="email-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h2 id="email-subject" class="text-xl font-bold"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="flex items-center mb-4">
+                <div id="sender-avatar" class="flex items-center justify-center h-10 w-10 rounded-full bg-blue-500 text-white font-bold mr-4"></div>
+                <div>
+                    <div id="email-sender" class="font-medium"></div>
+                    <div class="text-sm text-gray-500">to me</div>
+                </div>
+            </div>
+            <p id="email-content" class="text-gray-800"></p>
+        </div>
+    </div>
+
+    <!-- Compose Email Modal -->
+    <div id="compose-modal" class="compose-modal">
+        <div class="bg-gray-100 p-4 flex justify-between items-center">
+            <h3 class="text-lg font-semibold">New Message</h3>
+            <button id="close-compose" class="text-gray-500 hover:text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="p-4">
+            <input type="text" placeholder="To" class="w-full mb-2 p-2 border border-gray-300 rounded">
+            <input type="text" placeholder="Subject" class="w-full mb-2 p-2 border border-gray-300 rounded">
+            <textarea placeholder="Message" class="w-full h-64 p-2 border border-gray-300 rounded"></textarea>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/emailService.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
