@@ -39,5 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
       answerInput.value = '';
     }
   });
+
+// Changed the validation for all cases
+
+
   
   
