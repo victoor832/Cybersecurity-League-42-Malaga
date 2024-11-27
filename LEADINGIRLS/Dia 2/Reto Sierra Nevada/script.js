@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function checkAnswer() {
       const answer = answerInput.value.trim().toLowerCase();
   
-      if (answer === "sierra nevada") {
+      if (answer.toLowerCase() === "sierra nevada") {
         resultDiv.textContent = "¡Correcto! Has encontrado el tesoro en Sierra Nevada. Tu flag es: 48";
         resultDiv.className = "result correct";
       } else {
