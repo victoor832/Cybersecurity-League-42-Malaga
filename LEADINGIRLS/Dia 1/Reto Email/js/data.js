@@ -48,5 +48,45 @@ const emails = [
         `,
         time: 'Mar 15',
         read: false
-    }
+    },
+{
+    id: 4,
+    sender: 'Ana Ruiz',
+    subject: 'Documentos para revisión',
+    preview: 'Hola a todos, Adjunto los documentos que necesitan ser revisados para...',
+    content: `
+        <p>Hola a todos,</p>
+        <p>Adjunto los documentos que necesitan ser revisados para la presentación del próximo mes. Por favor, necesito sus comentarios antes del viernes.</p>
+        <p>Los puntos principales a revisar son:</p>
+        <ul>
+            <li>Análisis de mercado</li>
+            <li>Proyecciones financieras</li>
+            <li>Plan de implementación</li>
+        </ul>
+        <p>Gracias de antemano,<br>Ana</p>
+    `,
+    time: '2:15 PM',
+    read: false
+},
+{
+    id: 5,
+    sender: 'Servicio Técnico Apple',
+    subject: '¡ALERTA! Tu cuenta de iCloud ha sido comprometida',
+    preview: 'Hemos detectado actividad sospechosa en tu cuenta de iCloud...',
+    content: `
+        <p>Estimado cliente de Apple,</p>
+        <p>Hemos detectado múltiples intentos de inicio de sesión sospechosos en tu cuenta de iCloud desde diferentes ubicaciones. Por seguridad, tu cuenta será suspendida en las próximas 12 horas.</p>
+        <p>Para verificar tu identidad y mantener tu cuenta activa, necesitamos que:</p>
+        <ul>
+            <li>Confirmes tus datos personales</li>
+            <li>Actualices tu información de seguridad</li>
+            <li>Verifiques tu método de pago</li>
+        </ul>
+        <p>Haz clic aquí para verificar tu cuenta: http://apple-secure-verify.xyz</p>
+        <p>Si no realizas esta verificación, perderás el acceso a todos tus servicios de iCloud.</p>
+        <p>Departamento de Seguridad de Apple</p>
+    `,
+    time: '9:20 AM',
+    read: false
+}
 ];
