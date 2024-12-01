@@ -7,7 +7,7 @@ const logEntries = [
     "[2024-11-26 02:20:01] Usuario: Carlos - IP: 201.0.103.31 - Acceso a: /admin/panel",
     "[2024-11-26 02:22:50] Usuario: Carlos - IP: 201.0.103.31 - Exportación desde: /admin/logs",
     "[2024-11-26 09:10:02] Usuario: Lucía - IP: 192.168.1.34 - Acceso a: /dashboard",
-    "[2024-11-27 10:24:30] Usuario: Daniel - IP: 172.16.223.1 - Acceso a: /user/documents"
+    "[2024-11-27 10:24:30] Usuario: Daniel - IP: 172.16.223.1 - Acceso a: /user/documents/"
 ];
 
 const logElement = document.getElementById('log');
